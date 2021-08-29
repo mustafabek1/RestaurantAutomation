@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+      http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
+    <changeSet id="08-12-2020_15:41" author="zuleyha.muzennet">
+        <createTable tableName="PRODUCTS">
+            <column autoIncrement="true" name="id" type="int(1)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="product_name" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="price" type="int(1)"/>
+            <column name="media_id" type="int(1)">
+                <constraints foreignKeyName="fk_media" references="MEDIA(id)"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="PRODUCTS"/>
+        </rollback>
+
+    </changeSet>
+    <changeSet id="17-11-2010_15:31" author="zuleyha.muzennet">
+
+        <addColumn tableName="PRODUCTS">
+            <column name="deleted" type="boolean(1)" defaultValue="FALSE"></column>
+        </addColumn>
+    </changeSet>
+
+</databaseChangeLog>

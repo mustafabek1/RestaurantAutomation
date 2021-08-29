@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+      http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
+    <changeSet id="07-10-2020_16:28" author="zuleyha.muzennet">
+        <createTable tableName="ORDER_ITEMS">
+            <column autoIncrement="true" name="id" type="int(1)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="price" type="int(1)"/>
+            <column name="piece" type="int(1)"/>
+            <column name="product_id" type="int(10)">
+                <constraints foreignKeyName="fk_order_item_product" references="PRODUCTS(id)"/>
+            </column>
+            <column name="order_id" type="int(10)">
+                <constraints foreignKeyName="fk_order_item_order" references="CART(id)"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="ORDER_ITEMS"/>
+        </rollback>
+    </changeSet>
+    <changeSet id="17-11-2020_13:28" author="zuleyha.muzennet">
+        <addColumn tableName="ORDER_ITEMS">
+            <column name="deleted" type="boolean(1)" defaultValue="FALSE"></column>
+        </addColumn>
+    </changeSet>
+
+</databaseChangeLog>
