@@ -4,8 +4,8 @@ const ContextUser=createContext()
 
 class ContextUserProvider extends Component{
     state={
-        username:'',
-        password:'',
+        username:'S ',
+        password:'m ',
     }
     setUsername=(username)=>{
         this.setState((prevState)=>({username}))

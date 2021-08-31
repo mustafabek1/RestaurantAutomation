@@ -184,7 +184,7 @@ class ProductList extends Component {
                             <div className="list-group">
                                 <a className="list-group-item list-group-item-action active"
                                    style={{backgroundColor: '#258d2f'}}>
-                                    Categories
+                                    katagoriler
                                 </a>
                                 {this.getCategoriesMap()}
                                 <h4>Selected Table :{JSON.parse(localStorage.getItem('tableId'))}</h4>

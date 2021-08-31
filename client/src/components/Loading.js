@@ -5,7 +5,9 @@ class Loading extends Component {
     render() {
         return (
             <div className="loadingCSS">
+
                 <div className="innerLoader">
+                    
                     <img src={loading2}/>
                 </div>
 
