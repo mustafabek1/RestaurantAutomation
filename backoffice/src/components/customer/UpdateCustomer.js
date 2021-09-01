@@ -93,9 +93,9 @@ class UpdateCustomer extends Component {
                                         }
                                         </select>
                                     </div>
-                                    <button className="btn btn-success" onClick={this.updateCustomer}>Save</button>
+                                    <button className="btn btn-success" onClick={this.updateCustomer}> Save </button>
                                     <Link to="/list-customers" className="btn btn-danger"
-                                          style={{marginLeft: "10px"}}>Cancel
+                                          style={{marginLeft: "10px"}}> Cancel
                                     </Link>
                                 </form>
                             </div>

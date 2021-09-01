@@ -20,11 +20,11 @@ class DetailCustomer extends Component {
                     <div className="col-sm-12 mt-2">
                         <div className="row">
                             <div className="card col-sm-6">
-                                <div className="card-header"> Customer Detail</div>
+                                <div className="card-header"> Customer DEtail</div>
                                 <div className="card-body">
                                     <h5 className="card-title">Customer Name : {this.state.customers.name}</h5>
                                     <p className="card-text">Address : {this.state.customers.address}</p>
-                                    <p className="card-text">Phone : {this.state.customers.phone}</p>
+                                    <p className="card-text">Telefon : {this.state.customers.phone}</p>
                                 </div>
                             </div>
                             <div className="card col-sm-5">

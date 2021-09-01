@@ -15,9 +15,9 @@ class ListCustomers extends Component {
         super(props)
         this.state = {
             customers: [],
-            page: 0,
+            page: 1,
             size: 10,
-            total: 0
+            total: 1
         }
     }
 

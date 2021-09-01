@@ -12,12 +12,12 @@ class AddCustomer extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            name: '',
-            address: '',
-            phone: '',
+            name: ' ',
+            address: ' ',
+            phone: ' ',
             mediaList: [],
             media: {},
-            mediaId: ''
+            mediaId: ' '
         }
     }
 
@@ -99,9 +99,9 @@ class AddCustomer extends Component {
                                             }
                                         </select>
                                     </div>
-                                    <button className="btn btn-success" onClick={this.saveCustomer}>Save</button>
-                                    <Link to="/list-customers" className="btn btn-danger"
-                                          style={{marginLeft: "10px"}}>Cancel
+                                    <button className="btn btn-success"  onClick = {this.saveCustomer}>Save</button>
+                                    <Link to="/list-customers" className= "btn btn-danger"
+                                          style={{marginLeft: "10px"}}> Cancel
                                     </Link>
                                 </form>
                             </div>
